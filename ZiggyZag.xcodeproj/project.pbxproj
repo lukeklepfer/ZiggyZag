@@ -15,6 +15,9 @@
 		AD2F10A11DA592C500BEB933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2F109F1DA592C500BEB933 /* LaunchScreen.storyboard */; };
 		AD2F10AC1DA592C500BEB933 /* ZiggyZagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F10AB1DA592C500BEB933 /* ZiggyZagTests.swift */; };
 		AD2F10B71DA592C500BEB933 /* ZiggyZagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F10B61DA592C500BEB933 /* ZiggyZagUITests.swift */; };
+		AD2F10C51DA5A7A500BEB933 /* Coin.dae in Resources */ = {isa = PBXBuildFile; fileRef = AD2F10C41DA5A7A500BEB933 /* Coin.dae */; };
+		AD2F10C71DA5A7B100BEB933 /* Reality.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD2F10C61DA5A7B100BEB933 /* Reality.mp3 */; };
+		ADF91C311DA6DC84000D9151 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF91C301DA6DC84000D9151 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		AD2F10B21DA592C500BEB933 /* ZiggyZagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiggyZagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F10B61DA592C500BEB933 /* ZiggyZagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiggyZagUITests.swift; sourceTree = "<group>"; };
 		AD2F10B81DA592C500BEB933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD2F10C41DA5A7A500BEB933 /* Coin.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Coin.dae; sourceTree = "<group>"; };
+		AD2F10C61DA5A7B100BEB933 /* Reality.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Reality.mp3; sourceTree = "<group>"; };
+		ADF91C301DA6DC84000D9151 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF91C311DA6DC84000D9151 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				AD2F10AA1DA592C500BEB933 /* ZiggyZagTests */,
 				AD2F10B51DA592C500BEB933 /* ZiggyZagUITests */,
 				AD2F10921DA592C400BEB933 /* Products */,
+				ADF91C2F1DA6DC83000D9151 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +113,8 @@
 				AD2F109A1DA592C400BEB933 /* Main.storyboard */,
 				AD2F109D1DA592C500BEB933 /* Assets.xcassets */,
 				AD2F109F1DA592C500BEB933 /* LaunchScreen.storyboard */,
+				AD2F10C61DA5A7B100BEB933 /* Reality.mp3 */,
+				AD2F10C41DA5A7A500BEB933 /* Coin.dae */,
 				AD2F10A21DA592C500BEB933 /* Info.plist */,
 			);
 			path = ZiggyZag;
@@ -126,6 +136,14 @@
 				AD2F10B81DA592C500BEB933 /* Info.plist */,
 			);
 			path = ZiggyZagUITests;
+			sourceTree = "<group>";
+		};
+		ADF91C2F1DA6DC83000D9151 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADF91C301DA6DC84000D9151 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +214,13 @@
 				TargetAttributes = {
 					AD2F10901DA592C400BEB933 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = HX5Z8E9QEF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					AD2F10A61DA592C500BEB933 = {
 						CreatedOnToolsVersion = 8.0;
@@ -235,10 +259,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2F10C51DA5A7A500BEB933 /* Coin.dae in Resources */,
 				AD2F10971DA592C400BEB933 /* art.scnassets in Resources */,
 				AD2F10A11DA592C500BEB933 /* LaunchScreen.storyboard in Resources */,
 				AD2F109E1DA592C500BEB933 /* Assets.xcassets in Resources */,
 				AD2F109C1DA592C400BEB933 /* Main.storyboard in Resources */,
+				AD2F10C71DA5A7B100BEB933 /* Reality.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = ZiggyZag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luke.ZiggyZag;
@@ -428,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = ZiggyZag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luke.ZiggyZag;
@@ -509,6 +537,7 @@
 				AD2F10BD1DA592C500BEB933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD2F10BE1DA592C500BEB933 /* Build configuration list for PBXNativeTarget "ZiggyZagTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +546,7 @@
 				AD2F10C01DA592C500BEB933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD2F10C11DA592C500BEB933 /* Build configuration list for PBXNativeTarget "ZiggyZagUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +555,7 @@
 				AD2F10C31DA592C500BEB933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
